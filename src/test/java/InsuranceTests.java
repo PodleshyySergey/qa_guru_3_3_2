@@ -21,8 +21,8 @@ public class InsuranceTests {
 
         $("[href=\"/make-money/\"]").click();
         $("[data-test-id=\"tabs-list\"]").$(byText("Страхование вкладов")).click();
-        $("[data-widget-name=\"BlockV2\"]").scrollTo().shouldHave(Condition.text("Страхованию подлежат"));
-
+        $(byText("Полезно знать")).parent().shouldBe(Condition.text("Страхованию подлежат"));
+        
     }
 
 }
