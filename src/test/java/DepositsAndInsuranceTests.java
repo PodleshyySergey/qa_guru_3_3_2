@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class depositsAndInsuranceTests {
+public class DepositsAndInsuranceTests {
 
     @BeforeEach
     public void setUp() {
@@ -23,7 +23,7 @@ public class depositsAndInsuranceTests {
         $x("//p[contains(text(),'Депозиты')]/..").click();
         $x("//button[contains(text(),'Архивные счета и депозиты')]").click();
         $x("//span[contains(text(),'Депозиты')]").click();
-        $$x("//div[@data-widget-name='CatalogCard']").find(Condition.visible).getSize().equals(5);
+        $$x("//div[@data-widget-name='CatalogCard']").shouldHaveSize(5);
     }
 
     @Test
